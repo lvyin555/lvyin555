@@ -1,6 +1,6 @@
 # Cloud
 顺便放东西的地方
-vim:
++.vimrc
 ```
 let g:clipboard = {
   \   'name': 'copy',
