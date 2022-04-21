@@ -19,6 +19,7 @@ cd ~/.vim
 mkdir plugged plugin syntax colors doc autoload
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
+```
 let g:clipboard = {
   \   'name': 'copy',
   \   'copy': {
