@@ -1,6 +1,16 @@
 # Cloud
 顺便放东西的地方<br>
-.vimrc
+VIM配置文件<br>
+这个配置文件还原了小部分Windows的快捷键,并且做到了剪贴板互通<br>
+不过因为我主要使用WSL所以其中粘贴的部分<C-V>是注释的<br>
+并且复制和粘贴默认到系统剪贴板,不过剪贴没有(因为我要用来删东西的)<br>
+以下列出插件<br>
+<https://github.com/scrooloose/nerdtree><br>
+<https://github.com/skywind3000/vim-auto-popmenu><br>
+<https://github.com/skywind3000/vim-dict><br>
+<https://github.com/skywind3000/vim-terminal-help><br>
+<https://github.com/skywind3000/asyncrun.vim><br>
+<https://github.com/skywind3000/asynctasks.vim><br>
 ```
 let g:clipboard = {
   \   'name': 'copy',
