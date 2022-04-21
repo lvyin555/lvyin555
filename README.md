@@ -11,6 +11,13 @@ VIM配置文件<br>
 <https://github.com/skywind3000/vim-terminal-help><br>
 <https://github.com/skywind3000/asyncrun.vim><br>
 <https://github.com/skywind3000/asynctasks.vim><br>
+安装<br>
+[vim-plug]: https://github.com/junegunn/vim-plug
+```
+mkdir ~/.vim
+cd ~/.vim
+mkdir plugged plugin syntax colors doc autoload
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 let g:clipboard = {
   \   'name': 'copy',
