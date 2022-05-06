@@ -24,4 +24,4 @@ Set-PSReadLineOption -Colors @{
   ContinuationPrompt = 'Green'
   Default            = 'Green'
 }
-cat C:\Users\14413\Documents\Powershell_out.txt
+cat ~\Documents\Powershell_out.txt
