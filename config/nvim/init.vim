@@ -44,8 +44,8 @@ map <S-C-Z> <Esc><C-R>
 noremap j k
 noremap k j
 
-map y "+y
-map p "+p
+noremap y "+y
+noremap p "+p
 
 behave mswin
 set number
