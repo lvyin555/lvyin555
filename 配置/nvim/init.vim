@@ -2,11 +2,11 @@ let g:clipboard = {
       \  'name' : 'wsl',
       \  'copy' : {
       \    '+' : 'win32yank -i',
-      \    '*' : 'win32yank -i',
+      \    '*' : 'termux-clipboard-set',
       \  },
       \  'paste' : {
       \    '+' : 'win32yank -o',
-      \    '*' : 'win32yank -o',
+      \    '*' : 'termux-clipboard-get',
       \  },
       \}
 if &term =~ "xterm"
