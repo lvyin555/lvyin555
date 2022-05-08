@@ -2,11 +2,11 @@ let g:clipboard = {
       \  'name' : 'wsl',
       \  'copy' : {
       \    '+' : 'win32yank -i',
-      \    '*' : 'win32yank -i',
+      \    '*' : 'termux-clipboard-get -i',
       \  },
       \  'paste' : {
       \    '+' : 'win32yank -o',
-      \    '*' : 'win32yank -o',
+      \    '*' : 'termux-clipboard-get -o',
       \  },
       \}
 if &term =~ "xterm"
@@ -14,7 +14,7 @@ if &term =~ "xterm"
     let &t_SR = "\<Esc>[3 q"
     let &t_EI = "\<Esc>[2 q"
 endif
-set clipboard^=unnamed
+"set clipboard^=unnamed
 nmap <BS> X
 
 imap <C-Z> <Esc>ua
@@ -40,7 +40,8 @@ map <C-Z> <Esc>u
 map <C-A> <Esc>ggVG
 map <C-S> <Esc>:w!<CR>
 map <S-C-Z> <Esc><C-R> 
-
+map y "+y
+map p "+p
 noremap j k
 noremap k j
 
