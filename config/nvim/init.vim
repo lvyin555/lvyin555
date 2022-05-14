@@ -1,12 +1,14 @@
+autocmd VimLeave * set guicursor=a:ver25-blinkon0 
+autocmd VimLeavePre * set guicursor=a:ver25-blinkon0 
 let g:clipboard = {
       \  'name' : 'wsl',
       \  'copy' : {
       \    '+' : 'win32yank -i',
-      \    '*' : 'termux-clipboard-set',
+      \    '*' : 'win32yank -i',
       \  },
       \  'paste' : {
       \    '+' : 'win32yank -o',
-      \    '*' : 'termux-clipboard-get',
+      \    '*' : 'win32yank -o',
       \  },
       \}
 if &term =~ "xterm"
@@ -27,7 +29,7 @@ inoremap [ []<Esc>i
 inoremap { {}<Esc>i
 
 vmap <C-C> y
-vmap <C-X> d
+vmap <C-X> "+d
 vmap <BS> d
 vnoremap <Up> k
 vnoremap <Down> j
@@ -75,13 +77,13 @@ let NERDTreeShowBookmarks=1
 let NERDTreeShowHidden=0
 autocmd vimenter * if !argc()|NERDTree|endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-let g:NERDTreeDirArrowExpandable = '▸'
+let g:asynctasks_term_pxpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 let NERDTreeIgnore = ['\.pyc$', '\.swp', '\.swo', '\.vscode', '__pycache__','\.git','\.github']
 let g:NERDTreeShowLineNumbers=1
 "let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
-let g:NERDTreeQuitOnOpen = 1
+let g:asynctasks_term_pn = 1
 ""let NERDTreeDirArrows=1
 
 let g:apc_enable_ft = {'*':1}
@@ -98,6 +100,3 @@ map! <F9> <Esc>:AsyncTask file-build<CR>
 let g:asyncrun_rootmarks = ['.git', '.svn', '.root', '.project', '.hg']
 let g:asynctasks_term_pos = 'bottom'
 let g:asyncrun_open = 5
-
-autocmd VimLeave * silent !echo -ne '\e[5 q'
-autocmd VimLeavePre * silent !echo -ne '\e[5 q'
