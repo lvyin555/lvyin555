@@ -113,6 +113,5 @@ export VISUAL=vim
 export PAGER=more
 export RANGER_LOAD_DEFAULT_RC=FALSE
 alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
-alias ,='echo -ne "\e[5 q"'
 drvfsd.sh
 neofetch
