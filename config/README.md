@@ -1,7 +1,7 @@
 # 配置
 vim配置:  
 1. 插件管理使用plug
-2. 目前完成了Windows下的部分快捷键(不需要的建议去掉),和wsl下的剪贴板通信[就这玩意](https://github.com/equalsraf/win32yank),非wsl用户建议删除
+2. 目前完成了Windows下的部分快捷键(不需要的建议去掉),和wsl和Termux下的剪贴板通信[wsl](https://github.com/equalsraf/win32yank),非wsl用户建议删除,Termux需下载TermuxAPI
 3. 插件数量很少,并且体积都很小,不过能够达到目录树,自动补全,一键运行这些IDE的功能
 
 zsh配置:  
