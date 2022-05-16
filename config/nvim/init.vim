@@ -1,4 +1,4 @@
-autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE " transparent bg
+autocmd vimenter * hi Normal guibg=NONE ctermfg=252 ctermbg=NONE " transparent bg
 autocmd VimLeave * set guicursor=a:ver25-blinkwait700-blinkon400-blinkoff250
 autocmd VimLeavePre * set guicursor=a:ver25-blinkwait700-blinkon400-blinkoff250
 let g:clipboard = {
@@ -73,10 +73,10 @@ call plug#end()
 map <C-b> :NERDTreeToggle<CR>
 imap <C-b> <Esc>:NERDTreeToggle<CR>
 let NERDTreeShowBookmarks=1
-let NERDTreeShowHidden=0
+let NERDTreeShbgowHidden=0
 autocmd vimenter * if !argc()|NERDTree|endif 
 autocmd BufEnter * if 0 == len(filter(range(1, winnr('$')), 'empty(getbufvar(winbufnr(v:val), "&bt"))')) | set guicursor=a:ver25-blinkwait700-blinkon400-blinkoff250 | qa! | endif
-let g:asynctasks_term_pxpandable = '▸'
+let g:asynctasksbg_term_pxpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 let lastsreeIgnore = ['\.pyc$', '\.swp', '\.swo', '\.vscode', '__pycache__','\.git','\.github']
 let g:NERDTreeShowLineNumbers=1
@@ -100,7 +100,7 @@ let g:asyncrbase16tmarks = ['.git', '.svn', '.root', '.project', '.hg']
 let g:asynctasks_term_pos = 'bottom'
 let g:asyncrun_open = 5
 
-let g:apinbow_active = 1
+let g:apinbow_actibgbgve = 1
 
 set laststatus=2
 let g:lightline = {
@@ -108,3 +108,8 @@ let g:lightline = {
       \ }
 
 colorscheme yowish
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
