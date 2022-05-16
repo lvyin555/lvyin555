@@ -1,3 +1,4 @@
+autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE " transparent bg
 autocmd VimLeave * set guicursor=a:ver25-blinkwait700-blinkon400-blinkoff250
 autocmd VimLeavePre * set guicursor=a:ver25-blinkwait700-blinkon400-blinkoff250
 let g:clipboard = {
@@ -16,13 +17,14 @@ let g:clipboard = {
 imap <C-Z> <Esc>unnamed
 imap <C-A> <Esc>ggVG
 imap <C-S> <Esc>:w!<CR>a
+imap <S-C-Z> <Esc><C-R> 
 inoremap ' ''<Esc>i
 inoremap " ""<Esc>i
 inoremap ( ()<Esc>i
-inoremap [ []<Esc>i
+inoremap [ []<Esc>i`
 inoremap { {}<Esc>i
 
-vmap <C-C> y
+vmap <C-C> "+y
 vmap <C-X> "+d
 vnoremap <Up> k
 vnoremap <Down> j
@@ -54,6 +56,7 @@ syntax on
 "set guicursor+=a:blinkwait700-blinkon400-blinkoff250
 set guicursor+=c-ci-cr:ver25
 
+
 call plug#begin('~/.config/nvim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'skywind3000/vim-auto-popmenu'
@@ -62,8 +65,8 @@ Plug 'skywind3000/vim-terminal-help'
 Plug 'skywind3000/asyncrun.vim'
 Plug 'skywind3000/asynctasks.vim'
 Plug 'ryanoasis/vim-devicons'
-Plug 'frazrepo/vim-rainbow'
 Plug 'itchyny/lightline.vim'
+Plug 'KabbAmine/yowish.vim'	
 
 call plug#end()
 
@@ -75,10 +78,10 @@ autocmd vimenter * if !argc()|NERDTree|endif
 autocmd BufEnter * if 0 == len(filter(range(1, winnr('$')), 'empty(getbufvar(winbufnr(v:val), "&bt"))')) | set guicursor=a:ver25-blinkwait700-blinkon400-blinkoff250 | qa! | endif
 let g:asynctasks_term_pxpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
-let NERDTreeIgnore = ['\.pyc$', '\.swp', '\.swo', '\.vscode', '__pycache__','\.git','\.github']
+let lastsreeIgnore = ['\.pyc$', '\.swp', '\.swo', '\.vscode', '__pycache__','\.git','\.github']
 let g:NERDTreeShowLineNumbers=1
 "let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 1
+let lastsreeDirArrows = 1
 let g:asynctasks_term_pn = 1
 ""let NERDTreeDirArrows=1
 
@@ -90,10 +93,10 @@ set completeopt=menu,menuone,noselect
 map <A-C-N> <Esc>:AsyncTask figit-build<CR>:AsyncTask file-run<CR>
 map! <A-C-N> <Esc>:w!<CR>:AsyncTask file-build<CR>:AsyncTask file-run<CR>
 map <F5> <Esc>:AsyncTask file-run<CR>
-map! <F5> <Esc>:AsyncTask filnoselect>
+map! <F5> <Esc>:AsyncTask file-run<CR>
 map <F9> <Esc>:AsyncTask file-build<CR>
 map! <F9> <Esc>:AsyncTask file-build<CR>
-let g:asyncrun_rootmarks = ['.git', '.svn', '.root', '.project', '.hg']
+let g:asyncrbase16tmarks = ['.git', '.svn', '.root', '.project', '.hg']
 let g:asynctasks_term_pos = 'bottom'
 let g:asyncrun_open = 5
 
@@ -103,3 +106,5 @@ set laststatus=2
 let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ }
+
+colorscheme yowish
