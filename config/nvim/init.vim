@@ -24,7 +24,6 @@ inoremap { {}<Esc>i
 
 vmap <C-C> y
 vmap <C-X> "+d
-inoremap> d
 vnoremap <Up> k
 vnoremap <Down> j
 vnoremap <Left> h
@@ -52,7 +51,8 @@ set guicursor+=a:blinkon0
 highlight Comment cterm=underline ctermfg=red ctermbg=blue
 autocmd InsertEnter,InsertLeave * set cul!
 syntax on
-set guicursor+=a:blinkwait700-blinkon400-blinkoff250
+"set guicursor+=a:blinkwait700-blinkon400-blinkoff250
+set guicursor+=c-ci-cr:ver25
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'scrooloose/nerdtree'
@@ -72,7 +72,7 @@ imap <C-b> <Esc>:NERDTreeToggle<CR>
 let NERDTreeShowBookmarks=1
 let NERDTreeShowHidden=0
 autocmd vimenter * if !argc()|NERDTree|endif 
-autocmd BufEnter * if 0 == len(filter(range(1, winnr('$')), 'empty(getbufvar(winbufnr(v:val), "&bt"))')) | qa! | endif
+autocmd BufEnter * if 0 == len(filter(range(1, winnr('$')), 'empty(getbufvar(winbufnr(v:val), "&bt"))')) | set guicursor=a:ver25-blinkwait700-blinkon400-blinkoff250 | qa! | endif
 let g:asynctasks_term_pxpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 let NERDTreeIgnore = ['\.pyc$', '\.swp', '\.swo', '\.vscode', '__pycache__','\.git','\.github']
