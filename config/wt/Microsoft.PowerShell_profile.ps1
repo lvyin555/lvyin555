@@ -10,7 +10,7 @@ Set-PSReadLineKeyHandler -Key "Ctrl+z" -Function Undo
 oh-my-posh prompt init pwsh --config C:\Users\14413\AppData\Local\oh-my-posh\themes/jandedobbeleer.omp.json | Invoke-Expression
 function _sudo {
     $ss = "$args ; pause"
-    Start-Process powershell -Verb runAs -ArgumentList $ss
+    Start-Process pwsh -Verb runAs -ArgumentList $ss
 }
 set-alias  -name sudo -value _sudo
 Set-PSReadLineOption -Colors @{
@@ -24,4 +24,16 @@ Set-PSReadLineOption -Colors @{
   ContinuationPrompt = 'Green'
   Default            = 'Green'
 }
-cat ~\Documents\Powershell_out.txt
+function getlist {Get-ChildItem -Name}
+function wslvim {
+  $ss = "$args"
+  wsl vim $ss
+}
+function wslzsh {
+  $ss = "$args"
+  wsl zsh $ss
+}
+Set-Alias ls getlist
+Set-Alias zsh wslzsh
+Set-Alias vim wslvim
+cat C:\Users\14413\Documents\Powershell_out.txt
