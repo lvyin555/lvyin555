@@ -1,93 +1,56 @@
 {
+    "editor.smoothScrolling": true,
+    "editor.tabCompletion": "on",
+    "editor.stickyTabStops": true,
+    "editor.fontFamily": "'JetBrains Mono','JetBrainsMono Nerd Font Mono','Microsoft YaHei'",
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "editor.defaultFormatter": "ms-vscode.cpptools",
+    "editor.fontLigatures": true,
     "workbench.colorTheme": "Atom One Dark",
-    "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "workbench.iconTheme": "vscode-icons",
-    "workbench.editor.enablePreview": false,
+    "workbench.preferredDarkColorTheme": "Atom One Dark",
+    "workbench.preferredLightColorTheme": "Atom One Dark",
+    "debug.allowBreakpointsEverywhere": true,
     "code-runner.fileDirectoryAsCwd": true,
-    "editor.fontSize": 20,
     "code-runner.runInTerminal": true,
-    "python.testing.cwd": "C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.1264.0_x64__qbz5n2kfra8p0\\python3.10.exe",
-    "vsicons.dontShowNewVersionMessage": true,
-    "settingsSync.ignoredExtensions": [
-        "ms-ceintl.vscode-language-pack-zh-hans",
-        "13xforever.language-x86-64-assembly",
-        "vscodevim.vim",
-        "ms-edgedevtools.vscode-edge-devtools",
-        "msjsdiag.debugger-for-chrome"
-    ],
-    "security.workspace.trust.untrustedFiles": "open",
-    "gitlens.advanced.messages": {
-        "suppressGitMissingWarning": true
-    },
     "code-runner.saveAllFilesBeforeRun": true,
     "code-runner.saveFileBeforeRun": true,
-    "vim.easymotion": true,
-    "vim.normalModeKeyBindingsNonRecursive":[
-        {
-            "before": ["k"],
-            "after": ["j"]
-        },
-        {
-            "before": ["j"],
-            "after": ["k"] 
-        },
-        {
-            "before": ["<Esc>"],
-            "after": ["i"]
-        },
-    ],
-    "vim.operatorPendingModeKeyBindings": [
-        {
-            "before": ["k"],
-            "after": ["j"]
-        },
-        {
-            "before": ["j"],
-            "after": ["k"] 
-        },
-        {
-            "before": ["<Esc>"],
-            "after": ["v"]
-        },
-    ],
-    "vim.handleKeys": {
-    "<C-a>": false,
-    "<C-f>": false,
-    "<C-c>": false,
-    "<C-x>": false,
-},
-"explorer.confirmDragAndDrop": false,
-"workbench.editorAssociations": {
-    "*.pdf": "default"
-},
-"workbench.enableExperiments": false,
-"terminal.integrated.profiles.windows": {
-    "pwsh7": {
-      "path": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
-      "args": "-nologo",
+    "files.autoSave": "afterDelay",
+    "workbench.iconTheme": "vscode-icons",
+    "editor.fontSize": 18,
+    "terminal.external.windowsExec": "wt",
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.enableBell": true,
+    "terminal.integrated.fontFamily": "'JetBrains Mono','JetBrainsMono Nerd Font Mono'",
+    "debug.console.fontSize": 18,
+    "editor.mouseWheelZoom": true,
+    "winopacity.opacity": 220,
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
     },
-  },
-"terminal.integrated.defaultProfile.windows": "pwsh7",
-"files.autoSave": "afterDelay",
-"git.path": "C:\\Users\\14413\\git.exe",
-"git.enableSmartCommit": true,
-"terminal.integrated.enableMultiLinePasteWarning": false,
-"git.autofetch": true,
-"git.confirmSync": false,
-"editor.fontFamily": "'JetBrains Mono','JetBrainsMono Nerd Font Mono'",
-"editor.fontLigatures": true,
-"editor.fontWeight": "normal",
-"editor.mouseWheelZoom": true,
-"terminal.integrated.fontWeight": "normal",
-"terminal.integrated.localEchoStyle": "dim",
-"bracket-pair-colorizer-2.depreciation-notice": false,
-"vscode-edge-devtools.mirrorEdits": true,
-"C_Cpp.files.exclude": {
-    "**/.vscode": true
-},
-"editor.linkedEditing": true,
-"editor.insertSpaces": false,
-"workbench.settings.editor": "json",
-"winopacity.opacity": 220,
+    "json.trace.server": "verbose",
+    "terminal.integrated.profiles.windows":
+        {
+            "PowerShell": 
+                {
+                    "path": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+                    "args": ["-Nologo"],
+                    "icon": "terminal-powershell",
+                }
+        },
+    "python.languageServer": "Pylance",
+    "python.autoComplete.addBrackets": true,
+    "python.autoComplete.extraPaths": [],
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "editor.guides.bracketPairs": "active",
+    "workbench.settings.editor": "json",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
+    "pylance.insidersChannel": "daily",
+    "python.analysis.completeFunctionParens": true,
+    "python.analysis.typeCheckingMode": "basic",
+    "editor.semanticHighlighting.enabled": true,
+    "python.analysis.extraPaths": [],
+    "window.openFoldersInNewWindow": "on",
+    "window.openFilesInNewWindow": "default",
 }
