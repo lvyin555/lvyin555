@@ -64,7 +64,7 @@
             "antialiasingMode": "cleartype",
             "backgroundImage": null,
             "backgroundImageOpacity": 0.10000000000000001,
-            "closeOnExit": "graceful",
+            "closeOnExit": "always",
             "colorScheme": "Dark",
             "cursorShape": "bar",
             "font": 
@@ -74,7 +74,7 @@
                 "weight": "medium"
             },
             "intenseTextStyle": "bright",
-            "opacity": 30,
+            "opacity": 75,
             "padding": "25",
             "useAcrylic": false
         },
@@ -101,23 +101,30 @@
             },
             {
                 "commandline": "wsl",
-                "cursorShape": "bar",
                 "guid": "{5d11970e-7767-417f-b7b3-9aa3281e7a25}",
                 "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
                 "name": "Linux",
                 "startingDirectory": "/root"
             },
             {
-                "commandline": "c:/1.bat",
-                "guid": "{ec088a6e-f71c-4718-8ee6-c9d9e2f50344}",
-                "name": "\u6e05\u7406"
+                "commandline": "cli.exe -p COM2 repl",
+                "guid": "{141d171c-4fd9-426d-9008-8cbc4b0b05d3}",
+                "hidden": false,
+                "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
+                "name": "cli micro"
             },
             {
                 "commandline": "conhost.exe",
                 "guid": "{0a0b1f8d-699b-4e3b-bfa6-4d6b6776b5d2}",
-                "hidden": false,
+                "hidden": true,
+                "icon": "ms-appx:///ProfileIcons/{0caa0dad-35be-5f56-a8ff-afceeeaa6101}.png",
                 "name": "conhost",
                 "startingDirectory": "%USERPROFILE%"
+            },
+            {
+                "commandline": "c:/1.bat",
+                "guid": "{ec088a6e-f71c-4718-8ee6-c9d9e2f50344}",
+                "name": "\u6e05\u7406"
             }
         ]
     },
@@ -181,14 +188,14 @@
             "brightRed": "#E74856",
             "brightWhite": "#F2F2F2",
             "brightYellow": "#F9DA0E",
-            "cursorColor": "#F4FFF9",
+            "cursorColor": "#FFD205",
             "cyan": "#3A96DD",
             "foreground": "#CCEDFF",
             "green": "#61A10D",
             "name": "Dark",
             "purple": "#881798",
             "red": "#C50F1F",
-            "selectionBackground": "#F4FFF9",
+            "selectionBackground": "#424543",
             "white": "#CCCCCC",
             "yellow": "#C19C00"
         },
@@ -204,7 +211,7 @@
             "brightRed": "#E74856",
             "brightWhite": "#BEC2CC",
             "brightYellow": "#FFCB18",
-            "cursorColor": "#C1D9E8",
+            "cursorColor": "#E8DF03",
             "cyan": "#3A96DD",
             "foreground": "#8BC4CF",
             "green": "#13A10E",
