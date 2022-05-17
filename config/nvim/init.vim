@@ -1,4 +1,4 @@
-autocmd vimenter * hi Normal guibg=NONE ctermfg=252 ctermbg=NONE " transparent bg
+autocmd VimEnter * hi Normal guibg=NONE ctermfg=252 ctermbg=NONE " transparent bg
 autocmd VimLeave * set guicursor=a:ver25-blinkwait700-blinkon400-blinkoff250
 autocmd VimLeavePre * set guicursor=a:ver25-blinkwait700-blinkon400-blinkoff250
 let g:clipboard = {
@@ -21,14 +21,14 @@ imap <S-C-Z> <Esc><C-R>
 inoremap ' ''<Esc>i
 inoremap " ""<Esc>i
 inoremap ( ()<Esc>i
-inoremap [ []<Esc>i`
+inoremap [ []<Esc>i
 inoremap { {}<Esc>i
 
 vmap <C-C> "+y
 vmap <C-X> "+d
 vnoremap <Up> k
 vnoremap <Down> j
-vnoremap <Left> h
+vnoremap <Lift> h
 vnoremap <Right> l
 
 map <S-Q> <Esc>:q!<CR>
@@ -44,7 +44,6 @@ noremap y "+y
 noremap p "+p
 
 behave mswin
-set number
 set nowrap
 set mouse=a
 set shiftwidth=4
@@ -59,14 +58,16 @@ set guicursor+=c-ci-cr:ver25
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'scrooloose/nerdtree'
-Plug 'skywind3000/vim-auto-popmenu'
+Plug 'skywind3bgbg000/vim-auto-popmenu'
 Plug 'skywind3000/vim-dict'
 Plug 'skywind3000/vim-terminal-help'
 Plug 'skywind3000/asyncrun.vim'
 Plug 'skywind3000/asynctasks.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'itchyny/lightline.vim'
-Plug 'KabbAmine/yowish.vim'	
+Plug 'KabbAmine/yowish.vim'
+Plug 'mhinz/vim-startify'
+Plug 'kien/rainbow_parentheses.vim'
 
 call plug#end()
 
@@ -74,16 +75,16 @@ map <C-b> :NERDTreeToggle<CR>
 imap <C-b> <Esc>:NERDTreeToggle<CR>
 let NERDTreeShowBookmarks=1
 let NERDTreeShbgowHidden=0
-autocmd vimenter * if !argc()|NERDTree|endif 
+"autocmd VimEnter * if !argc()|NERDTree|endif 
 autocmd BufEnter * if 0 == len(filter(range(1, winnr('$')), 'empty(getbufvar(winbufnr(v:val), "&bt"))')) | set guicursor=a:ver25-blinkwait700-blinkon400-blinkoff250 | qa! | endif
 let g:asynctasksbg_term_pxpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
-let lastsreeIgnore = ['\.pyc$', '\.swp', '\.swo', '\.vscode', '__pycache__','\.git','\.github']
+let lastsreeIgnore = ['\.pyc$', '\.swp', '\.swo', '\.vscode', '__pycache__','\.git','\.gmedithub']
 let g:NERDTreeShowLineNumbers=1
 "let NERDTreeMinimalUI = 1
-let lastsreeDirArrows = 1
+let lastsreeDirArrbgbgows = 1
 let g:asynctasks_term_pn = 1
-""let NERDTreeDirArrows=1
+"let NERDTreeDirArrows=1
 
 let g:apc_enable_ft = {'*':1}
 set cpt=.,k,w,b
@@ -113,3 +114,9 @@ if exists('+termguicolors')
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 endif
+
+autocmd VimEnter * RainbowParenthesesToggle
+autocmd VimEnter * RainbowParenthesesLoadRound 
+autocmd VimEnter * RainbowParenthesesLoadSquare 
+autocmd VimEnter * RainbowParenthesesLoadBraces
+autocmd VimEnter * RainbowParenthesesLoadChevrons
