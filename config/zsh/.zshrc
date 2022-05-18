@@ -112,6 +112,7 @@ export RANGER_LOAD_DEFAULT_RC=FALSE
 export VISUAL=vim
 export PAGER=more
 export RANGER_LOAD_DEFAULT_RC=FALSE
-alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
-drvfsd.sh
+alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"; echo -ne "\e[5 q"'
+alias pwsh=pwsh.exe
+mount -t drvfs D: /mnt/d
 neofetch
