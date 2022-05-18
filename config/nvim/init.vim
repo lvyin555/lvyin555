@@ -1,6 +1,3 @@
-autocmd VimEnter * hi Normal guibg=NONE ctermfg=252 ctermbg=NONE " transparent bg
-autocmd VimLeave * set guicursor=a:ver25-blinkwait700-blinkon400-blinkoff250
-autocmd VimLeavePre * set guicursor=a:ver25-blinkwait700-blinkon400-blinkoff250
 let g:clipboard = {
       \  'name' : 'wsl',
       \  'copy' : {
@@ -43,6 +40,9 @@ noremap k j
 noremap y "+y
 noremap p "+p
 
+autocmd VimEnter * hi Normal guibg=NONE ctermfg=252 ctermbg=NONE " transparent bg
+autocmd VimLeave * set guicursor=a:ver25-blinkwait700-blinkon400-blinkoff250
+autocmd VimLeavePre * set guicursor=a:ver25-blinkwait700-blinkon400-blinkoff250
 behave mswin
 set nowrap
 set nu
