@@ -11,10 +11,10 @@ let g:clipboard = {
       \}
 "set clipboard^=unnamed
 
-imap <C-Z> <Esc>unnamed
+imap <C-Z> <Esc>ua
 imap <C-A> <Esc>ggVG
 imap <C-S> <Esc>:w!<CR>a
-imap <S-C-Z> <Esc><C-R> 
+imap <S-C-Z> <Esc><C-R>a
 inoremap ' ''<Esc>i
 inoremap " ""<Esc>i
 inoremap ( ()<Esc>i
