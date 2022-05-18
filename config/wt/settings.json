@@ -107,11 +107,11 @@
                 "startingDirectory": "/root"
             },
             {
-                "commandline": "cli.exe -p COM2 repl",
+                "commandline": "PLINK.EXE -load \\\"PuTTY COM Session\\\"",
                 "guid": "{141d171c-4fd9-426d-9008-8cbc4b0b05d3}",
                 "hidden": false,
                 "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
-                "name": "cli micro"
+                "name": "micro"
             },
             {
                 "commandline": "conhost.exe",
