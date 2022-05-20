@@ -9,7 +9,17 @@ let g:clipboard = {
       \    '*' : 'win32yank -o',
       \  },
       \}
-"set clipboard^=unnamed
+
+map <S-Q> <Esc>:q!<CR>
+map <C-Z> <Esc>u
+map <C-A> <Esc>ggVG
+map <C-S> <Esc>:w!<CR>
+map <S-C-Z> <Esc><C-R>
+
+noremap j k
+noremap k j
+noremap y "+y
+noremap p "+p
 
 imap <C-Z> <Esc>ua
 imap <C-A> <Esc>ggVG
@@ -28,18 +38,6 @@ vnoremap <Down> j
 vnoremap <Lift> h
 vnoremap <Right> l
 
-map <S-Q> <Esc>:q!<CR>
-map <C-Z> <Esc>u
-map <C-A> <Esc>ggVG
-map <C-S> <Esc>:w!<CR>
-map <S-C-Z> <Esc><C-R> 
-
-noremap j k
-noremap k j
-
-noremap y "+y
-noremap p "+p
-
 autocmd VimEnter * hi Normal guibg=NONE ctermfg=252 ctermbg=NONE " transparent bg
 autocmd VimLeave * set guicursor=a:ver25-blinkwait700-blinkon400-blinkoff250
 autocmd VimLeavePre * set guicursor=a:ver25-blinkwait700-blinkon400-blinkoff250
@@ -50,16 +48,14 @@ set mouse=a
 set shiftwidth=4
 set backspace=indent,eol,start
 set guicursor+=a:blinkon0
+set guicursor+=c-ci-cr:ver25
 highlight Comment cterm=underline ctermfg=red ctermbg=blue
 autocmd InsertEnter,InsertLeave * set cul!
 syntax on
-"set guicursor+=a:blinkwait700-blinkon400-blinkoff250
-set guicursor+=c-ci-cr:ver25
-
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'scrooloose/nerdtree'
-Plug 'skywind3bgbg000/vim-auto-popmenu'
+Plug 'skywind3000/vim-auto-popmenu'
 Plug 'skywind3000/vim-dict'
 Plug 'skywind3000/vim-terminal-help'
 Plug 'skywind3000/asyncrun.vim'
@@ -76,16 +72,14 @@ map <C-b> :NERDTreeToggle<CR>
 imap <C-b> <Esc>:NERDTreeToggle<CR>
 let NERDTreeShowBookmarks=1
 let NERDTreeShbgowHidden=0
-"autocmd VimEnter * if !argc()|NERDTree|endif 
-autocmd BufEnter * if 0 == len(filter(range(1, winnr('$')), 'empty(getbufvar(winbufnr(v:val), "&bt"))')) | set guicursor=a:ver25-blinkwait700-blinkon400-blinkoff250 | qa! | endif
-let g:asynctasksbg_term_pxpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
-let lastsreeIgnore = ['\.pyc$', '\.swp', '\.swo', '\.vscode', '__pycache__','\.git','\.gmedithub']
-let g:NERDTreeShowLineNumbers=1
-"let NERDTreeMinimalUI = 1
+let NERDTreeQuitOnOpen=1
+let NERDTreeShowBookmarks=1
 let lastsreeDirArrbgbgows = 1
+let g:NERDTreeShowLineNumbers=1
 let g:asynctasks_term_pn = 1
-"let NERDTreeDirArrows=1
+let lastsreeIgnore = ['\.pyc$', '\.swp', '\.swo', '\.vscode', '__pycache__','\.git','\.gmedithub']
+autocmd BufEnter * if 0 == len(filter(range(1, winnr('$')), 'empty(getbufvar(winbufnr(v:val), "&bt"))')) | set guicursor=a:ver25-blinkwait700-blinkon400-blinkoff250 | qa! | endif
+highlight! link NERDTreeFlags NERDTreeDir
 
 let g:apc_enable_ft = {'*':1}
 set cpt=.,k,w,b
@@ -121,3 +115,37 @@ autocmd VimEnter * RainbowParenthesesLoadRound
 autocmd VimEnter * RainbowParenthesesLoadSquare 
 autocmd VimEnter * RainbowParenthesesLoadBraces
 autocmd VimEnter * RainbowParenthesesLoadChevrons
+
+let g:startify_custom_header = [
+    \	'く__,.ヘヽ.　　　　/　,ー､ 〉',
+    \	'',
+    \	'　　　＼ , !-─‐-i　/　/´',
+    \	'',
+    \	'　　　 　 ／｀ｰ　　　 L/／｀ヽ､',
+    \	'',
+    \	'　　　ｲ 　/ /-‐/　ｉ　L_ ﾊ ヽ!　 i',
+    \	'',
+    \	'　　　 ﾚ ﾍ 7ｲ｀ﾄ　 ﾚ-ﾄ､!ハ|　 |',
+    \	'',
+    \	'　　　　 !,/7 ✪　　 ´i✪ﾊiソ| 　 |　　　',
+    \	'',
+    \	'　　　　 |.从　　_　　 ,,,, / |./ 　 |',
+    \	'',
+    \	'　　　　 ﾚ| i＞.､,,__　_,.イ / 　.i 　|',
+    \	'',
+    \	'　　　 ﾚ| | / k_７_/ﾚヽ,　ﾊ.　|',
+    \	'',
+    \	'　　　 | |/i 〈|/　 i　,.ﾍ |　i　|',
+    \	'',
+    \	'　　　.|/ /　ｉ： 　 ﾍ!　　＼　|',
+    \	'',
+    \	'　　　 　 　 kヽ､ﾊ 　 _,.ﾍ､ 　 /､!',
+    \	'',
+    \	'　　　 !〈//｀Ｔ´, ＼ ｀7ｰr',
+    \	'',
+    \	'　　　 ﾚヽL__|___i,___,ンﾚ|ノ',
+    \	'',
+    \	'　　　 　　　ﾄ-,/　|___./',
+    \	'',
+    \	'　　　 　　　ｰ　　!_,.:',
+    \]
