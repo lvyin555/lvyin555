@@ -31,6 +31,7 @@ inoremap ( ()<Esc>i
 inoremap [ []<Esc>i
 inoremap { {}<Esc>i
 
+vmap <BS> d
 vmap <C-C> "+y
 vmap <C-X> "+d
 vnoremap <Up> k
