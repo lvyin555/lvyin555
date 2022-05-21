@@ -1,12 +1,12 @@
 let g:clipboard = {
-      \  'name' : 'wsl',
+      \  'name' : 'copy',
       \  'copy' : {
       \    '+' : 'win32yank -i',
-      \    '*' : 'win32yank -i',
+      \    '*' : 'termux-clipboard-set',
       \  },
       \  'paste' : {
       \    '+' : 'win32yank -o',
-      \    '*' : 'win32yank -o',
+      \    '*' : 'termux-clipboard-get',
       \  },
       \}
 
@@ -32,8 +32,8 @@ inoremap [ []<Esc>i
 inoremap { {}<Esc>i
 
 vmap <BS> d
-vmap <C-C> "+y
-vmap <C-X> "+d
+vnoremap <C-C> "+y
+vnoremap <C-X> "+d
 vnoremap <Up> k
 vnoremap <Down> j
 vnoremap <Lift> h
