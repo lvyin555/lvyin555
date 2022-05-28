@@ -1,0 +1,60 @@
+[
+	{
+		"key": "f10",
+		"command": "workbench.action.tasks.runTask"
+	},
+	{
+		"key": "f10",
+		"command": "C_Cpp.BuildAndRunFile"
+	},
+	{
+		"key": "f5",
+		"command": "python.execInTerminal"
+	},
+	{
+		"key": "alt+b",
+		"command": "extension.openInDefaultBrowser"
+	},
+	{
+		"key": "alt+b",
+		"command": "-extension.openInDefaultBrowser"
+	},
+	{
+		"key": "shift+alt+b",
+		"command": "-extension.openInSpecifyBrowser"
+	},
+	{
+		"key": "f4",
+		"command": "workbench.action.debug.start",
+		"when": "debuggersAvailable && debugState == 'inactive'"
+	},
+	{
+		"key": "f5",
+		"command": "-workbench.action.debug.start",
+		"when": "debuggersAvailable && debugState == 'inactive'"
+	},
+	{
+		"key": "f4",
+		"command": "workbench.action.debug.continue",
+		"when": "debugState == 'stopped'"
+	},
+	{
+		"key": "f5",
+		"command": "-workbench.action.debug.continue",
+		"when": "debugState == 'stopped'"
+	},
+	{
+		"key": "f4",
+		"command": "debug.openView",
+		"when": "!debuggersAvailable"
+	},
+	{
+		"key": "f5",
+		"command": "-debug.openView",
+		"when": "!debuggersAvailable"
+	},
+	{
+		"key": "f5",
+		"command": "python.execInTerminal-icon"
+	}
+]
