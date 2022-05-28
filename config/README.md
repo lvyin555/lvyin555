@@ -11,7 +11,7 @@
 - 插件:ranger-devicons2  
 
 ## pwsh配置:
-- 使用oh-my-posh  
+- 使用oh-my-posh, PSReadLineKeyHandler, posh-git  
 
 ## vscode插件:
 - code --install-extension aaron-bond.better-comments
