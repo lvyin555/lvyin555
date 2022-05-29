@@ -18,7 +18,7 @@ map <S-C-Z> <Esc><C-R>
 
 noremap j k
 noremap k j
-noremap y "+y
+noremap y y
 noremap p "+p
 
 imap <C-Z> <Esc>ua
