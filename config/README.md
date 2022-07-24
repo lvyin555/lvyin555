@@ -33,3 +33,5 @@
 - code --install-extension skacekachna.win-opacity
 - code --install-extension techer.open-in-browser
 - code --install-extension yzhang.markdown-all-in-one
+
+### 字体是jetbrains mono!!!
