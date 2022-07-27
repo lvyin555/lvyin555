@@ -1,4 +1,5 @@
 {
+	"workbench.settings.editor": "json",
 	"editor.smoothScrolling": true,
 	"editor.tabCompletion": "on",
 	"editor.stickyTabStops": true,
@@ -43,7 +44,6 @@
 	"[python]": {
 		"editor.defaultFormatter": "ms-python.python"
 	},
-	"pylance.insidersChannel": "daily",
 	"python.analysis.completeFunctionParens": true,
 	"python.analysis.typeCheckingMode": "basic",
 	"editor.semanticHighlighting.enabled": true,
@@ -91,22 +91,42 @@
 		"c++": "tools",
 		"asm": "stack",
 		"shell": "src",
+		"godot": "tools",
 	},
 	"editor.bracketPairColorization.enabled": true,
 	"workbench.colorCustomizations": {
 		"editorBracketHighlight.foreground1": "#ee9302",
-        "editorBracketHighlight.foreground2": "#ffd700",
+		"editorBracketHighlight.foreground2": "#ffd700",
 		"editorBracketHighlight.foreground3": "#24d600",
-        "editorBracketHighlight.foreground4": "#179fff",
+		"editorBracketHighlight.foreground4": "#179fff",
 		"editorBracketHighlight.foreground5": "#da70d6",
 		"editorBracketHighlight.foreground6": "#b42c2e",
-    },
-	"workbench.settings.editor": "json",
+	},
+	/*
+	"workbench.colorCustomizations": {
+		"editorBracketHighlight.foreground1": "#179fff",
+		"editorBracketHighlight.foreground2": "#17ff93",
+		"editorBracketHighlight.foreground3": "#eaee02",
+		"editorBracketHighlight.foreground4": "#ff8c00",
+		"editorBracketHighlight.foreground5": "#da70d5",
+		"editorBracketHighlight.foreground6": "#c702ee",
+	},*/
 	"editor.foldingHighlight": false,
 	"[markdown]": {
 		"editor.wordWrap": "off"
 	},
 	"explorer.confirmDragAndDrop": false,
 	"editor.formatOnPaste": true,
+	"editor.useTabStops": false,
 	"workbench.editor.enablePreview": false,
+	"terminal.integrated.enableMultiLinePasteWarning": false,
+	"terminal.integrated.fontSize": 15,
+	"terminal.integrated.localEchoExcludePrograms": [
+		"vim",
+		"vi",
+		"nano",
+		"tmux",
+		"nvim",
+		"ranger"
+	],
 }
