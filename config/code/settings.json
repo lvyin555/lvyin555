@@ -2,7 +2,7 @@
 	"workbench.settings.editor": "json",
 	"editor.smoothScrolling": true,
 	"editor.tabCompletion": "on",
-	"editor.fontFamily": "'JetBrains Mono','JetBrainsMono Nerd Font Mono',Consolas",
+	"editor.fontFamily": "'JetBrains Mono','JetBrainsMono Nerd Font Mono',Consolas,'Microsoft YaHei'",
 	"editor.bracketPairColorization.independentColorPoolPerBracketType": true,
 	"editor.fontLigatures": true,
 	"workbench.colorTheme": "Atom One Dark",
