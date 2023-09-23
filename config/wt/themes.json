@@ -173,11 +173,20 @@
         },
         {
           "background": "#d4d4d4",
+          "foreground": "#d4d4d4",
+          "invert_powerline": true,
+          "powerline_symbol": "\ue0b2",
+          "style": "powerline",
+          "template": " \u0008",
+          "type": "text"
+        },
+        {
+          "background": "#d4d4d4",
           "foreground": "#050505",
           "invert_powerline": true,
+          "":"",
           "style": "diamond",
-          "leading_diamond":"\ue0b2",
-          "template": " {{ .CurrentDate | date .Format }} \uf017 ",
+          "template": "{{ .CurrentDate | date .Format }} \uf017 ",
           "trailing_diamond": "\ue0b4\u2500\u256e",
           "type": "time"
         }
