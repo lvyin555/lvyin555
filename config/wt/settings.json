@@ -14,11 +14,22 @@
         {
             "command": 
             {
+                "action": "newTab"
+            },
+            "keys": "ctrl+shift+n"
+        },
+        {
+            "command": 
+            {
                 "action": "splitPane",
                 "split": "auto",
                 "splitMode": "duplicate"
             },
             "keys": "alt+shift+d"
+        },
+        {
+            "command": "find",
+            "keys": "ctrl+shift+f"
         },
         {
             "command": "unbound",
@@ -35,17 +46,6 @@
         {
             "command": "paste",
             "keys": "ctrl+v"
-        },
-        {
-            "command": 
-            {
-                "action": "newTab"
-            },
-            "keys": "ctrl+shift+n"
-        },
-        {
-            "command": "find",
-            "keys": "ctrl+shift+f"
         }
     ],
     "alwaysOnTop": false,
@@ -71,7 +71,7 @@
             "backgroundImage": "C:\\Users\\Jwy20\\Pictures\\Saved Pictures\\terminal.png",
             "backgroundImageOpacity": 1.0,
             "backgroundImageStretchMode": "uniformToFill",
-            "closeOnExit": "always",
+            "closeOnExit": "never",
             "colorScheme": "Dark",
             "cursorShape": "bar",
             "font": 
@@ -83,7 +83,8 @@
             "intenseTextStyle": "bright",
             "opacity": 0,
             "padding": "25",
-            "useAcrylic": false
+            "useAcrylic": false,
+            "useAtlasEngine": true
         },
         "list": 
         [
@@ -404,51 +405,7 @@
         }
     ],
     "theme": "dark",
-    "themes": 
-    [
-        {
-            "name": "legacyDark",
-            "tab": 
-            {
-                "background": null,
-                "showCloseButton": "always",
-                "unfocusedBackground": null
-            },
-            "window": 
-            {
-                "applicationTheme": "dark",
-                "useMica": false
-            }
-        },
-        {
-            "name": "legacyLight",
-            "tab": 
-            {
-                "background": null,
-                "showCloseButton": "always",
-                "unfocusedBackground": null
-            },
-            "window": 
-            {
-                "applicationTheme": "light",
-                "useMica": false
-            }
-        },
-        {
-            "name": "legacySystem",
-            "tab": 
-            {
-                "background": null,
-                "showCloseButton": "always",
-                "unfocusedBackground": null
-            },
-            "window": 
-            {
-                "applicationTheme": "system",
-                "useMica": false
-            }
-        }
-    ],
+    "themes": [],
     "trimBlockSelection": true,
     "useAcrylicInTabRow": true,
     "windowingBehavior": "useExisting",
