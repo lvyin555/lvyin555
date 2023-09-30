@@ -206,7 +206,7 @@
             "always_enabled": true
           },
           "style": "plain",
-          "template": "\u276f ",
+          "template": "\u276f",
           "type": "status"
         }
       ],
@@ -217,7 +217,7 @@
         {
           "foreground": "#d3d7cf",
           "style": "plain",
-          "template": "\u2500\u256f",
+          "template": "\u2500\u256f ",
           "type": "text"
         }
       ],
