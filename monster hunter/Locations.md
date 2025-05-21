@@ -1,4 +1,5 @@
 # Monster Hunter 系列地区
+![map](https://raw.githubusercontent.com/lvyin555/lvyin555/refs/heads/main/monster%20hunter/map.jpg)
 ## **🏰修雷德地区(シュレイド地方)**
   > 曾经这里有一个名为修雷德王国的强大王国，不过在千年前因为黑龙的降临而毁灭了.
   > 如今王国分裂，东西方之间几乎没有交流。
