@@ -161,7 +161,7 @@
     - 聚魔之地(導きの地) -Iceborne
     - 幽境之谷(幽境の谷) -Iceborne
 - **南极**
-    - <ins>调查据点 月辰(セリエナ) -Iceborne<ins>
+    - <ins>调查据点 月辰(セリエナ) -Iceborne</ins>
       - 兵器置放处(兵器置き場) -Iceborne
     - 永霜冻土(渡りの凍て地) -Iceborne
 - **<ins>绫国(アヤ国)</ins>**
